@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  uechi-api:
+    build:
+      context: ./uechi_api
+    container_name: uechi-api
+    volumes:
+      - ./uechi_api:/Uechi/spring-boot
+    ports:
+      - "8080:8080"
+#    command: gradle clean bootRun -x test
